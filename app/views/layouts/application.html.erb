@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>AcProyect</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+	  <title>AcProyect</title>
+	  <%= stylesheet_link_tag    "application", :media => "all" %>
+	  <%= javascript_include_tag "application" %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class = "container">
+					<a class="brand" href="#">TreeBook KDC</a>
+					<ul class="nav">
+						<li><%= link_to "Show all Statuses", statuses_path %></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class = "container">
+			<%= yield %>
+		</div>
 
-<%= yield %>
-
-</body>
+	</body>
 </html>
